@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/data.ts","./src/main.tsx","./src/mappaths.ts","./src/types.ts","./src/components/comparemode.tsx","./src/components/continentview.tsx","./src/components/countrydetail.tsx","./src/components/navbar.tsx","./src/components/quiz.tsx","./src/components/searchpanel.tsx","./src/components/worldmap.tsx"],"version":"5.9.3"}

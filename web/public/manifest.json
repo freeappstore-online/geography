@@ -1,0 +1,19 @@
+{
+  "name": "World Geography",
+  "short_name": "Geography",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#1a1917",
+  "theme_color": "#1a1917",
+  "description": "Interactive world geography explorer with quizzes, maps, and country comparisons.",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ]
+}

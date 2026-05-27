@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --font-body: "Manrope", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --color-accent: #5b7db1;
+  --color-paper: #fefdfb;
+  --color-ink: #1a1917;
+  --color-muted: #8a8780;
+  --color-line: #e8e5e0;
+  --color-panel: #f5f3f0;
+  --color-active: #e6e3dd;
+  --radius-card: 1.25rem;
+  --radius-btn: 0.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-paper: #0f0f0e;
+    --color-ink: #f2f0ed;
+    --color-muted: #7a7770;
+    --color-line: #2a2825;
+    --color-panel: #1a1918;
+    --color-active: #262523;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-body);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3 { font-family: var(--font-display); }
+
+/* Scrollable containers */
+.scroll-y {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Map hover effects */
+.map-country {
+  cursor: pointer;
+  transition: opacity 0.15s, filter 0.15s;
+  stroke: var(--color-paper);
+  stroke-width: 1;
+}
+.map-country:hover {
+  opacity: 0.8;
+  filter: brightness(1.15);
+}
+.map-country.selected {
+  stroke: var(--color-ink);
+  stroke-width: 2.5;
+  filter: brightness(1.2);
+}
+
+/* Continent outlines */
+.continent-outline {
+  fill: none;
+  stroke: var(--color-line);
+  stroke-width: 0.5;
+  pointer-events: none;
+}
+
+/* Quiz animations */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+.shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+.pop {
+  animation: pop 0.3s ease-in-out;
+}
